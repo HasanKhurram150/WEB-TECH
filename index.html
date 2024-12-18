@@ -35,7 +35,7 @@
     <title>NUSYNC</title>
   </head>
   <body>
-    <!-- <div class="wrapper"> -->
+    <div class="wrapper">
     <header class="header">
       <a href="#">
         <img class="logo" alt="NUSYNC logo" src="img/Logos/NUsync.png" />
@@ -44,8 +44,8 @@
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="second.html">Events</a></li>
           <li><a class="main-nav-link" href="#">FeedBack</a></li>
-          <li><a class="main-nav-link" href="help.html">Help</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Sign Up</a></li>
+          <li><a class="main-nav-link" href="#help">Help</a></li>
+          <li><a class="main-nav-link nav-cta" href="#cta">Sign Up</a></li>
         </ul>
       </nav>
     </header>
@@ -71,16 +71,17 @@
               discover new passions, and make the most of your time at NUTECH -
               all in one place!
             </p>
-            <a href="#" class="btn btn-full margin-right-sm">
+            <a href="#cta" class="btn btn-full margin-right-sm">
               Record your progress
             </a>
-            <a href="#" class="btn btn-outline">Learn More &darr;</a>
+            <a href="#help" class="btn btn-outline">Learn More &darr;</a>
           </div>
         </div>
       </section>
-      <!-- </div> -->
+      </div>
       <!-- HELP SECTION -->
-      <div class="how-sec container grid grid--2-cols">
+       <section class="how-sec" id="help">
+      <div class=" container grid grid--2-cols">
         <div class="How">
           <div class="text">
             <div>
@@ -100,10 +101,10 @@
               <button class="btn btn-form" type="submit">Submit</button>
             </form>
 
-            <a class="link" href="#">
+            <!-- <a class="link" href="#">
               More FAQs
               <ion-icon name="arrow-forward-outline"></ion-icon>
-            </a>
+            </a> -->
           </div>
         </div>
         <div class="questions">
@@ -139,9 +140,10 @@
           </div>
         </div>
       </div>
+    </section>
       <!-- CALL-TO-ACTION SECTION  -->
-      <!-- <div class="foot-wrapper"> -->
-      <section class="section-cta">
+      <div class="foot-wrapper">
+      <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
@@ -170,7 +172,6 @@
                     required
                   />
                 </div>
-
                 <div>
                   <label for="select-where">Where did you hear from us?</label>
 
@@ -272,6 +273,6 @@
         </nav>
       </div>
     </footer>
-    <!-- </div> -->
+    </div>
   </body>
 </html>

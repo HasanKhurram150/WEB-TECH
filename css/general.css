@@ -71,6 +71,7 @@ html {
   /* font-size: 20px;*/
   /* Percentage of user's browser font-size setting */
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 body {
   font-family: Arial, sans-serif;
