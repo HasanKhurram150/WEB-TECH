@@ -2,3 +2,9 @@
 .header.scrolled {
   background-color: #fff; /* Solid background when scrolled */
 }
+
+.answer.show {
+  max-height: 200px; /* Set a max height high enough to fit the content */
+  opacity: 1; /* Make it fully visible */
+  padding: 10px; /* Add padding when visible */
+}

@@ -101,3 +101,18 @@ window.onscroll = function () {
     header.classList.remove("scrolled"); // Remove 'scrolled' class if at the top
   }
 };
+
+// Select the question button and the answer paragraph
+const questionButton = document.querySelector(".question");
+const answer = document.querySelector(".answer");
+
+// Toggle the visibility of the answer with smooth transition when the button is clicked
+questionButton.addEventListener("click", function () {
+  // If the answer is already visible, hide it
+  if (answer.classList.contains("show")) {
+    answer.classList.remove("show");
+  } else {
+    // If the answer is hidden, show it
+    answer.classList.add("show");
+  }
+});

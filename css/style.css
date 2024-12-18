@@ -403,7 +403,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-style: none;
+  border: none;
   gap: 3.6rem;
   background-color: #fff;
   margin-top: 1.6rem;
@@ -428,8 +428,20 @@
 }
 
 .answer {
+  display: none;
   font-size: 1.8rem;
   color: #000;
+
+  display: block; /* So it’s still a block element */
+  max-height: 0; /* Start with no height */
+  overflow: hidden; /* Hide content overflow */
+  opacity: 0; /* Start with 0 opacity */
+  padding: 0; /* No padding initially */
+  /* background-color: #f1f1f1; */
+  /* border: 1px solid #ddd; */
+  margin-top: 5px;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out,
+    padding 0.3s ease-out; /* Smooth transition */
 }
 
 .heading-primary-2 {
@@ -437,10 +449,11 @@
   line-height: 1.05;
   margin-bottom: 1.2rem;
   font-weight: 700;
+  color: #000;
 }
 
 .how-sec {
-  padding-top: 9.6rem;
+  padding: 12.6rem 0 12.6rem 0;
   padding-bottom: 9.6rem;
 }
 
