@@ -116,3 +116,85 @@ questionButton.addEventListener("click", function () {
     answer.classList.add("show");
   }
 });
+
+//*************************************
+// REGISTRATION FORM
+//*************************************
+
+// Get references to form elements
+const form = document.getElementById("registration-form");
+const fullNameInput = document.getElementById("full-name");
+const emailInput = document.getElementById("email");
+const sourceSelect = document.getElementById("select-where");
+
+// Handle form submission
+form.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent form from submitting the traditional way
+
+  const fullName = fullNameInput.value;
+  const email = emailInput.value;
+  const source = sourceSelect.value;
+
+  // Data to send to the backend
+  const data = { fullName, email, source };
+
+  try {
+    // Send data to backend API using Axios
+    const response = await axios.post("http://localhost:5500/register", data);
+    if (response.status === 200) {
+      alert("Registration Successful");
+      form.reset(); // Reset the form fields
+    } else {
+      alert("Error: " + response.data.message);
+    }
+  } catch (error) {
+    console.error("Error during registration:", error);
+    alert("There was an error with your registration.");
+  }
+});
+
+//*************************************
+// FEEDBACK FORM
+//*************************************
+
+// Get references to form elements
+// Declare constants for form and input elements
+const feedbackForm = document.getElementById("feedback-form");
+const nameInput = document.getElementById("name");
+const feedbackEmail = document.getElementById("feedback-email");
+const feedbackInput = document.getElementById("feedback");
+
+// Handle form submission
+feedbackForm.addEventListener("submit", async (event) => {
+  event.preventDefault(); // Prevent the form from submitting the traditional way
+
+  // Retrieve values from input fields
+  const name = nameInput.value;
+  const email = feedbackEmail.value;
+  const feedback = feedbackInput.value;
+
+  // Prepare the data to send to the backend
+  const data = { name, email, feedback };
+
+  try {
+    // Send the data to the backend API using Axios
+    const response = await axios.post("http://localhost:3000/feedback", data);
+
+    // Check the response status and alert the user accordingly
+    if (response.status === 200) {
+      alert("Feedback Submitted Successfully");
+      feedbackForm.reset(); // Reset the form fields after successful submission
+    } else {
+      alert("Error: " + response.data.message);
+    }
+  } catch (error) {
+    console.error("Error during feedback submission:", error);
+    alert("There was an error with your submission.");
+  }
+});
+
+//*************************************
+// QUESTIONS
+//*************************************
+
+const question = document.getElementById("help-form");

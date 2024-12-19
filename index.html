@@ -31,11 +31,12 @@
 
     <!-- JAVASCRIPT -->
     <script defer src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <title>NUSYNC</title>
   </head>
   <body>
-    <!-- <div class="wrapper"> -->
+    <div class="wrapper">
     <header class="header">
       <a href="#">
         <img class="logo" alt="NUSYNC logo" src="img/Logos/NUsync.png" />
@@ -43,7 +44,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li><a class="main-nav-link" href="second.html">Events</a></li>
-          <li><a class="main-nav-link" href="#">FeedBack</a></li>
+          <li><a class="main-nav-link" href="feedback.html">FeedBack</a></li>
           <li><a class="main-nav-link" href="#help">Help</a></li>
           <li><a class="main-nav-link nav-cta" href="#cta">Sign Up</a></li>
         </ul>
@@ -58,18 +59,12 @@
               Welcome to the NUTECH Co-Curricular Information Web App
             </h1>
             <p class="hero-description">
-              your go-to platform for staying informed and engaged with the
-              vibrant range of co-curricular activities at NUTECH. This app has
-              been designed to streamline and enhance your university experience
-              by providing a centralized space to explore, track, and
-              participate in various student events and initiatives. Whether
-              you're interested in clubs, sports, workshops, or cultural
-              activities, our platform ensures you never miss out on
-              opportunities that can enrich your academic journey. You can
-              easily record your participation, access event feedback, and stay
-              updated on the latest happenings across campus. Stay connected,
-              discover new passions, and make the most of your time at NUTECH -
-              all in one place!
+              <b> Unlock campus life at its best!</b> Stay connected with
+              NUTECH’s all-in-one platform for co-curricular activities. From
+              clubs and sports to workshops and cultural events, explore
+              opportunities that enrich your academic journey. Track your
+              participation, access feedback, and stay updated on campus
+              happenings—all in one place!
             </p>
             <a href="#cta" class="btn btn-full margin-right-sm">
               Record your progress
@@ -78,7 +73,7 @@
           </div>
         </div>
       </section>
-      <!-- </div> -->
+      </div>
       <!-- HELP SECTION -->
       <section class="how-sec" id="help">
         <div class="container grid grid--2-cols">
@@ -89,15 +84,15 @@
                 <p class="heading-primary-2">We got you.</p>
               </div>
               <!-- <p class="answer">Ask away!!</p> -->
-              <form class="help-form" action="#">
+              <form class="help-form" id="help-form" action="#">
                 <!-- <label class="answer" for="question">Ask away!!</label> -->
-                <input
+                <textarea
                   type="text"
                   id="question"
                   name="question"
                   placeholder="Enter your question here..."
                   required
-                />
+                ></textarea>
                 <button class="btn btn-form" type="submit">Submit</button>
               </form>
 
@@ -149,17 +144,17 @@
         </div>
       </section>
       <!-- CALL-TO-ACTION SECTION  -->
-      <!-- <div class="foot-wrapper"> -->
+      <div class="foot-wrapper">
       <section class="section-cta" id="cta">
         <div class="container">
           <div class="cta">
             <div class="cta-text-box">
-              <h2 class="heading-secondary">Register Yourself</h2>
+              <h2 class="heading-secondary">REGISTER YOURSELF</h2>
               <p class="cta-text">
                 With this you can record your all Co-curricular progress in one
                 place.
               </p>
-              <form class="cta-form" action="#">
+              <form class="cta-form" action="#" id="registration-form">
                 <div>
                   <label for="full-name">Full Name</label>
                   <input
@@ -280,6 +275,6 @@
         </nav>
       </div>
     </footer>
-    <!-- </div> -->
+    </div>
   </body>
 </html>
