@@ -36,42 +36,137 @@
     <title>Feedback Form</title>
   </head>
   <body>
-    <section class="section-cta feedback" id="cta">
-      <div class="container">
-        <div class="cta">
-          <div class="cta-text-box">
-            <h2 class="heading-secondary">FEEDBACK</h2>
-            <p class="cta-text">Share your feedback with us!</p>
-            <form class="cta-form" id="feedback-form">
-              <div>
-                <label for="name">Full Name</label>
-                <input id="name" type="text" placeholder="Your name" required />
-              </div>
+    <div class="wrapper-fd">
+      <header class="header">
+        <a href="#">
+          <img class="logo" alt="NUSYNC logo" src="img/Logos/NUsync.png" />
+        </a>
+        <nav class="main-nav">
+          <ul class="main-nav-list">
+            <li><a class="main-nav-link" href="second.html">Events</a></li>
+            <li><a class="main-nav-link" href="feedback.html">FeedBack</a></li>
+            <li><a class="main-nav-link" href="#help">Help</a></li>
+            <li><a class="main-nav-link nav-cta" href="#cta">Sign Up</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- FEEDBACK FORM -->
+      <section class="section-feedback" id="feedback">
+        <div class="container">
+          <div class="feedback">
+            <div class="fd-text-box">
+              <h2 class="heading-secondary">FEEDBACK</h2>
+              <p class="fd-text">Share your feedback with us!</p>
+              <form class="fd-form" id="feedback-form">
+                <div>
+                  <label for="name">Full Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label for="feedback-email">Email Address</label>
-                <input
-                  id="feedback-email"
-                  type="email"
-                  placeholder="Your email"
-                  required
-                />
-              </div>
+                <div>
+                  <label for="feedback-email">Email Address</label>
+                  <input
+                    id="feedback-email"
+                    type="email"
+                    placeholder="Your email"
+                    required
+                  />
+                </div>
 
-              <div>
-                <label for="feedback">Your Feedback</label>
-                <textarea
-                  id="feedback"
-                  placeholder="Your feedback"
-                  required
-                ></textarea>
-              </div>
+                <div>
+                  <label for="feedback">Your Feedback</label>
+                  <textarea
+                    id="feedback"
+                    placeholder="Your feedback"
+                    required
+                  ></textarea>
+                </div>
 
-              <button type="submit" class="btn btn-form">Submit</button>
-            </form>
+                <button type="submit" class="btn btn-form">Submit</button>
+              </form>
+            </div>
           </div>
         </div>
+      </section>
+    </div>
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container grid grid--footer">
+        <div class="logo-col">
+          <a href="#" class="logo-footer">
+            <img class="logo" alt="NUSYNC logo" src="img/Logos/NUsync.png" />
+          </a>
+          <ul class="social-links">
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-instagram"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-facebook"></ion-icon>
+              </a>
+            </li>
+            <li>
+              <a class="footer-link" href="#">
+                <ion-icon class="social-icon" name="logo-twitter"></ion-icon>
+              </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            Copyright &copy; <span class="year">2024</span> by NUTECH, All
+            rights reserved
+          </p>
+        </div>
+        <div class="address-col">
+          <p class="footer-heading">Contact Us</p>
+          <address class="contacts">
+            <p class="address">
+              National University of Technology, I-12, Islamabad.
+            </p>
+            <p>
+              <a class="footer-link" href="tel:415-201-6370">415-201-6370</a
+              ><br />
+              <a class="footer-link" href="mailto:hello@nutech.pk.edu"
+                >hello@nutech.pk.edu</a
+              >
+            </p>
+          </address>
+        </div>
+        <!-- NAV 1 -->
+        <nav class="nav-col">
+          <p class="footer-heading">Account</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Create Account</a></li>
+            <li><a class="footer-link" href="#">Sign in</a></li>
+            <li><a class="footer-link" href="#">iOS app</a></li>
+            <li><a class="footer-link" href="#">Android app</a></li>
+          </ul>
+        </nav>
+        <!-- NAV 2 -->
+        <nav class="nav-col">
+          <p class="footer-heading">University</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">About NUSYNC </a></li>
+            <li><a class="footer-link" href="#">For Business</a></li>
+            <li><a class="footer-link" href="#">Careers</a></li>
+          </ul>
+        </nav>
+        <!-- NAV 3 -->
+        <nav class="nav-col">
+          <p class="footer-heading">Resources</p>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#"></a></li>
+            <li><a class="footer-link" href="#">Help Center</a></li>
+            <li><a class="footer-link" href="#">Privacy & terms</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+    </footer>
   </body>
 </html>

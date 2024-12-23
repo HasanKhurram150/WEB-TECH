@@ -1,17 +1,6 @@
-console.log("Hello World");
+"use strict";
 
-const myName = "HK";
-const h1 = document.querySelector(".heading-primary");
-
-console.log(myName);
-console.log(h1);
-
-// h1.addEventListener("click", function () {
-//   h1.textContent = myName;
-//   h1.style.backgroundColor = "red";
-//   h1.style.padding = "5rem";
-// });
-
+// YEAR
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 console.log(currentYear);
@@ -101,20 +90,38 @@ window.onscroll = function () {
     header.classList.remove("scrolled"); // Remove 'scrolled' class if at the top
   }
 };
+// TRANSITION TO ANsWER
+// Select all question buttons
+// const questionButtons = document.querySelectorAll(".question");
 
-// Select the question button and the answer paragraph
-const questionButton = document.querySelector(".question");
-const answer = document.querySelector(".answer");
+// // Add a click event listener to each question button
+// questionButtons.forEach((button) => {
+//   button.addEventListener("click", function () {
+//     // Find the corresponding answer within the same faq-item
+//     const answer = this.nextElementSibling;
 
-// Toggle the visibility of the answer with smooth transition when the button is clicked
-questionButton.addEventListener("click", function () {
-  // If the answer is already visible, hide it
-  if (answer.classList.contains("show")) {
-    answer.classList.remove("show");
-  } else {
-    // If the answer is hidden, show it
-    answer.classList.add("show");
-  }
+//     // Toggle the 'show' class on the answer
+//     if (answer.classList.contains("show")) {
+//       answer.classList.remove("show");
+//     } else {
+//       answer.classList.add("show");
+//     }
+//   });
+// });
+// Select all question buttons
+const questionButtons = document.querySelectorAll(".question");
+
+// Add a click event listener to each question button
+questionButtons.forEach((button) => {
+  button.addEventListener("click", function () {
+    // Find the corresponding answer within the same faq-item
+    const answer = this.nextElementSibling;
+    const icon = this.querySelector("ion-icon");
+
+    // Toggle the 'show' class on the answer and update the icon
+    const isVisible = answer.classList.toggle("show");
+    icon.setAttribute("name", isVisible ? "remove-outline" : "add-outline");
+  });
 });
 
 //*************************************
@@ -178,7 +185,7 @@ feedbackForm.addEventListener("submit", async (event) => {
 
   try {
     // Send the data to the backend API using Axios
-    const response = await axios.post("http://localhost:3000/feedback", data);
+    const response = await axios.post("http://localhost:5500/feedback", data);
 
     // Check the response status and alert the user accordingly
     if (response.status === 200) {
@@ -197,4 +204,28 @@ feedbackForm.addEventListener("submit", async (event) => {
 // QUESTIONS
 //*************************************
 
-const question = document.getElementById("help-form");
+const questionInput = document.getElementById("help-form");
+
+helpForm.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  const question = questionInput.value;
+
+  const data = { question };
+
+  try {
+    // Send the data to the backend API using Axios
+    const response = await axios.post("http://localhost:5500/feedback", data);
+
+    // Check the response status and alert the user accordingly
+    if (response.status === 200) {
+      alert("Feedback Submitted Successfully");
+      feedbackForm.reset(); // Reset the form fields after successful submission
+    } else {
+      alert("Error: " + response.data.message);
+    }
+  } catch (error) {
+    console.error("Error during feedback submission:", error);
+    alert("There was an error with your submission.");
+  }
+});

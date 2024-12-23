@@ -524,12 +524,101 @@
 }
 
 /* FEEDBACK */
-.feedback {
-  /* max-width: 100%; */
-  /* max-height: 100vh; */
+.wrapper-fd {
   background-image: url(../img/25.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-bottom: 25.6rem;
+}
+.section-feedback {
+  padding: 9.6rem 0 25.6rem;
+  /* background-image: url(../img/25.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* padding-bottom: 51.2rem; */
+}
+.feedback {
+  /* display: grid; */
+  grid-template-columns: 1fr;
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
+  border-radius: 11px;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  );
+  overflow: hidden;
+  /* temp */
+  height: 50rem;
+}
+
+.fd-text-box {
+  padding: 6.4rem;
+  color: #1c2541;
+}
+
+.feedback .heading-secondary {
+  color: inherit;
+  margin-bottom: 3.2rem;
+}
+.fd-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
+}
+.fd-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
+}
+
+/* .cta-news-box {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+  padding: 1.6rem;
+
+  color: #1c2541;
+} */
+
+.fd-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.fd-form input,
+.fd-form select,
+.fd-form textarea {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border: none;
+  /* background-color: #d2e6f9; */
+  background-color: #fff;
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: inherit;
+}
+.fd-form input::placeholder {
+  color: #1c2541;
+}
+/* .cta-form select {
+}
+.cta-form button {
+} */
+
+.fd *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(28, 37, 65, 0.5);
 }
